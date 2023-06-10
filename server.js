@@ -29,7 +29,22 @@ app.post('/send-email', async (req, res) => {
                     from: "aanandhaveedu@gmail.com",
                     to: ["sankaris110p@gmail.com","ajay40@mailinator.com","venkatesh17042002@gmail.com"],
                     subject: content.subject,
-                    text: content.message
+                    html: `<!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <style>
+                            .thankyou{
+                                text-align: center;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <p>${content.name}, Added ${content.item} in ${content.component}</p>
+                        <p>Amount: ${content.amount}</p>
+                        <p>Remaining Balance: ${content.balance}</p>
+                        <p class="thankyou">Thank you!</p>
+                    </body>
+                    </html>`
                 });
                 res.status(200).send('Email sent successfully');
             }
