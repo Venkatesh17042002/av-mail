@@ -29,7 +29,7 @@ app.post('/send-email', async (req, res) => {
                     from: "aanandhaveedu@gmail.com",
                     to: ["sankaris110p@gmail.com","ajay40@mailinator.com","venkatesh17042002@gmail.com"],
                     subject: content.subject,
-                    html: ``
+                    text: content.message
                 });
                 res.status(200).send('Email sent successfully');
             }
