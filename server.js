@@ -24,7 +24,7 @@ app.post('/send-email', async (req, res) => {
         });
     
         try {
-            if(content?.action=="add"){
+            if(content?.action=="add" && content?.component=="budget"){
                 await transporter.sendMail({
                     from: "aanandhaveedu@gmail.com",
                     to: ["sankaris110p@gmail.com","ajay40@mailinator.com","venkatesh17042002@gmail.com"],
@@ -39,9 +39,117 @@ app.post('/send-email', async (req, res) => {
                         </style>
                     </head>
                     <body>
-                        <p>${content.name}, Added ${content.item} in ${content.component}</p>
+                        <p>Hello, ${content.name} Added ${content.item} in ${content.component}</p>
                         <p>Amount: ${content.amount}</p>
-                        <p>Remaining Balance: ${content.balance}</p>
+                        <p>current Balance: ${content.balance}</p>
+                        <p class="thankyou">Thank you!</p>
+                    </body>
+                    </html>`
+                });
+                res.status(200).send('Email sent successfully');
+            }else if(content?.action=="delete" && content?.component=="budget" ){
+                await transporter.sendMail({
+                    from: "aanandhaveedu@gmail.com",
+                    to: ["sankaris110p@gmail.com","ajay40@mailinator.com","venkatesh17042002@gmail.com"],
+                    subject: content.subject,
+                    html: `<!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <style>
+                            .thankyou{
+                                text-align: center;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <p>Hello, ${content.name} Deleted ${content.item} in ${content.component}</p>
+                        <p>current Balance: ${content.balance}</p>
+                        <p class="thankyou">Thank you!</p>
+                    </body>
+                    </html>`
+                });
+                res.status(200).send('Email sent successfully');
+            }else if(content?.action=="edit" && content?.component=="budget"){
+                await transporter.sendMail({
+                    from: "aanandhaveedu@gmail.com",
+                    to: ["sankaris110p@gmail.com","ajay40@mailinator.com","venkatesh17042002@gmail.com"],
+                    subject: content.subject,
+                    html: `<!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <style>
+                            .thankyou{
+                                text-align: center;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <p>Hello, ${content.name} Edited ${content.item} in ${content.component}</p>
+                        <p>current Balance: ${content.balance}</p>
+                        <p class="thankyou">Thank you!</p>
+                    </body>
+                    </html>`
+                });
+                res.status(200).send('Email sent successfully');
+            }
+            else if(content?.action=="add" && (content?.component=="tobuy" || content?.component=="stock")){
+                await transporter.sendMail({
+                    from: "aanandhaveedu@gmail.com",
+                    to: ["sankaris110p@gmail.com","ajay40@mailinator.com","venkatesh17042002@gmail.com"],
+                    subject: content.subject,
+                    html: `<!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <style>
+                            .thankyou{
+                                text-align: center;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <p>Hello, ${content.name} Added ${content.item} in ${content.component}</p>
+                        <p class="thankyou">Thank you!</p>
+                    </body>
+                    </html>`
+                });
+                res.status(200).send('Email sent successfully');
+            }else if(content?.action=="delete" && (content?.component=="tobuy" || content?.component=="stock") ){
+                await transporter.sendMail({
+                    from: "aanandhaveedu@gmail.com",
+                    to: ["sankaris110p@gmail.com","ajay40@mailinator.com","venkatesh17042002@gmail.com"],
+                    subject: content.subject,
+                    html: `<!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <style>
+                            .thankyou{
+                                text-align: center;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <p>Hello, ${content.name} Deleted ${content.item} in ${content.component}</p>
+                        <p class="thankyou">Thank you!</p>
+                    </body>
+                    </html>`
+                });
+                res.status(200).send('Email sent successfully');
+            }else if(content?.action=="edit" && (content?.component=="tobuy" || content?.component=="stock")){
+                await transporter.sendMail({
+                    from: "aanandhaveedu@gmail.com",
+                    to: ["sankaris110p@gmail.com","ajay40@mailinator.com","venkatesh17042002@gmail.com"],
+                    subject: content.subject,
+                    html: `<!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <style>
+                            .thankyou{
+                                text-align: center;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <p>Hello, ${content.name} Edited ${content.item} in ${content.component}</p>
                         <p class="thankyou">Thank you!</p>
                     </body>
                     </html>`
