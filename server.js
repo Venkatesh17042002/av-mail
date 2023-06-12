@@ -5,14 +5,16 @@ require("dotenv").config()
 const app = express();
 const port = 8000;
 
-const cors = require("cors");
-app.use(cors());
+
 
 app.use(express.json());
 app.use(morgan('dev'));
 
-app.post('/send-email', async (req, res) => {
-  const {content}= req.body;
+
+
+app.post('/sendEmail', async (req, res) => {
+    console.log("req got");
+  const content= req.body?.content;
 
     if (!content) {
         res.json("Enter valid content")
@@ -416,6 +418,10 @@ app.post('/send-email', async (req, res) => {
                     </html>`
                 });
                 res.status(200).send('Email sent successfully');
+            }
+            else{
+                console.log("no tesst case matched");
+                res.status(200).send('no tesst case matched');
             }
             
         } catch (error) {
