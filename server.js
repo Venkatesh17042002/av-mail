@@ -50,7 +50,7 @@ app.post('/send-email', async (req, res) => {
             }else if(content?.action=="delete" && content?.component=="budget" ){
                 await transporter.sendMail({
                     from: "aanandhaveedu@gmail.com",
-                    to: ["sankaris110p@gmail.com","ajay40@mailinator.com","venkatesh17042002@gmail.com"],
+                    to: ["sankaris110p@gmail.com","ajay40@mailinator.com","venkatesh17042002@gmail.com",,"bharathprakash2395@hotmail.com"],
                     subject: content.subject,
                     html: `<!DOCTYPE html>
                     <html lang="en">
@@ -95,7 +95,7 @@ app.post('/send-email', async (req, res) => {
             else if(content?.action=="add" && (content?.component=="tobuy" || content?.component=="stock")){
                 await transporter.sendMail({
                     from: "aanandhaveedu@gmail.com",
-                    to: ["sankaris110p@gmail.com","ajay40@mailinator.com","venkatesh17042002@gmail.com","bharathprak"],
+                    to: ["sankaris110p@gmail.com","ajay40@mailinator.com","venkatesh17042002@gmail.com","bharathprakash2395@hotmail.com"],
                     subject: content.subject,
                     html: `<!DOCTYPE html>
                     <html lang="en">
