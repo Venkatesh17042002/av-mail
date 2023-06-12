@@ -33,16 +33,59 @@ app.post('/send-email', async (req, res) => {
                     <html lang="en">
                     <head>
                         <style>
-                            .thankyou{
-                                text-align: center;
+                            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+                            *{
+                            font-family: 'Roboto', sans-serif;
+                            }
+                            .center{
+                                display: flex;
+                                justify-content: center;
+                                font-weight: bold;
+                            }
+                            .column{
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                            }
+                            a{
+                                text-decoration: none;
+                                color: rgb(103,58,183);
+                            }
+                            a:active{
+                                color: rgb(103,58,183);
+                            }
+                            span{
+                                margin-left: 5px;
+                                color: rgb(255, 24, 24)
+                            }
+                            .content{
+                                border-top: 2px solid rgb(45,92,255);
+                                border-bottom: 2px solid rgb(45,92,255);
+                                margin-bottom: 15px;
+                            }
+                            .tab{
+                                padding-left: 30px;
+                            }
+                            h2{
+                                margin: -5px 0px 15px 0px;
+                                color: rgb(255, 24, 24)
                             }
                         </style>
                     </head>
                     <body>
-                        <p>Hello, ${content.name} Added ${content.item} in ${content.component}</p>
-                        <p>Amount: ${content.amount}</p>
-                        <p>current Balance: ${content.balance}</p>
-                        <p class="thankyou">Thank you!</p>
+                        <a target="_blank" class="header column" href="http://aanandhaveedu.netlify.app/">
+                            <img src="https://aanandhaveedu.netlify.app/assets/av_logo.png" alt="av_logo" height="107px" width="100px">
+                            <h1 >Aanandhaveedu</h1>
+                            <h2 >${content.component} Notification</h2>
+                        </a>
+                        <div class="content">
+                            <h3>Hello,</h3>
+                            <p class="tab">${content.name}, Added ${content.item} in ${content.component}</p>
+                            <p class="tab">Amount: ${content.amount}</p>
+                            <p class="tab">Current Balance: ${content.balance}</p>
+                            <p class="center">Thank you!</p>
+                        </div>
+                        <div class="center">Created By <span>Venkatesh</span> </div>
                     </body>
                     </html>`
                 });
@@ -50,21 +93,64 @@ app.post('/send-email', async (req, res) => {
             }else if(content?.action=="delete" && content?.component=="budget" ){
                 await transporter.sendMail({
                     from: "aanandhaveedu@gmail.com",
-                    to: ["sankaris110p@gmail.com","ajay40@mailinator.com","venkatesh17042002@gmail.com",,"bharathprakash2395@hotmail.com"],
+                    to: ["sankaris110p@gmail.com","ajay40@mailinator.com","venkatesh17042002@gmail.com","bharathprakash2395@hotmail.com"],
                     subject: content.subject,
                     html: `<!DOCTYPE html>
                     <html lang="en">
                     <head>
                         <style>
-                            .thankyou{
-                                text-align: center;
+                            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+                            *{
+                            font-family: 'Roboto', sans-serif;
+                            }
+                            .center{
+                                display: flex;
+                                justify-content: center;
+                                font-weight: bold;
+                            }
+                            .column{
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                            }
+                            a{
+                                text-decoration: none;
+                                color: rgb(103,58,183);
+                            }
+                            a:active{
+                                color: rgb(103,58,183);
+                            }
+                            span{
+                                margin-left: 5px;
+                                color: rgb(255, 24, 24)
+                            }
+                            .content{
+                                border-top: 2px solid rgb(45,92,255);
+                                border-bottom: 2px solid rgb(45,92,255);
+                                margin-bottom: 15px;
+                            }
+                            .tab{
+                                padding-left: 30px;
+                            }
+                            h2{
+                                margin: -5px 0px 15px 0px;
+                                color: rgb(255, 24, 24)
                             }
                         </style>
                     </head>
                     <body>
-                        <p>Hello, ${content.name} Deleted ${content.item} in ${content.component}</p>
-                        <p>current Balance: ${content.balance}</p>
-                        <p class="thankyou">Thank you!</p>
+                        <a target="_blank" class="header column" href="http://aanandhaveedu.netlify.app/">
+                            <img src="https://aanandhaveedu.netlify.app/assets/av_logo.png" alt="av_logo" height="107px" width="100px">
+                            <h1 >Aanandhaveedu</h1>
+                            <h2 >${content.component} Notification</h2>
+                        </a>
+                        <div class="content">
+                            <h3>Hello,</h3>
+                            <p class="tab">${content.name}, Deleted ${content.item} in ${content.component}</p>
+                            <p class="tab">Current Balance: ${content.balance}</p>
+                            <p class="center">Thank you!</p>
+                        </div>
+                        <div class="center">Created By <span>Venkatesh</span> </div>
                     </body>
                     </html>`
                 });
@@ -78,15 +164,58 @@ app.post('/send-email', async (req, res) => {
                     <html lang="en">
                     <head>
                         <style>
-                            .thankyou{
-                                text-align: center;
+                            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+                            *{
+                            font-family: 'Roboto', sans-serif;
+                            }
+                            .center{
+                                display: flex;
+                                justify-content: center;
+                                font-weight: bold;
+                            }
+                            .column{
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                            }
+                            a{
+                                text-decoration: none;
+                                color: rgb(103,58,183);
+                            }
+                            a:active{
+                                color: rgb(103,58,183);
+                            }
+                            span{
+                                margin-left: 5px;
+                                color: rgb(255, 24, 24)
+                            }
+                            .content{
+                                border-top: 2px solid rgb(45,92,255);
+                                border-bottom: 2px solid rgb(45,92,255);
+                                margin-bottom: 15px;
+                            }
+                            .tab{
+                                padding-left: 30px;
+                            }
+                            h2{
+                                margin: -5px 0px 15px 0px;
+                                color: rgb(255, 24, 24)
                             }
                         </style>
                     </head>
                     <body>
-                        <p>Hello, ${content.name} Edited ${content.item} in ${content.component}</p>
-                        <p>current Balance: ${content.balance}</p>
-                        <p class="thankyou">Thank you!</p>
+                        <a target="_blank" class="header column" href="http://aanandhaveedu.netlify.app/">
+                            <img src="https://aanandhaveedu.netlify.app/assets/av_logo.png" alt="av_logo" height="107px" width="100px">
+                            <h1 >Aanandhaveedu</h1>
+                            <h2 >${content.component} Notification</h2>
+                        </a>
+                        <div class="content">
+                            <h3>Hello,</h3>
+                            <p class="tab">${content.name}, Edited ${content.item} in ${content.component}</p>
+                            <p class="tab">Current Balance: ${content.balance}</p>
+                            <p class="center">Thank you!</p>
+                        </div>
+                        <div class="center">Created By <span>Venkatesh</span> </div>
                     </body>
                     </html>`
                 });
@@ -101,14 +230,57 @@ app.post('/send-email', async (req, res) => {
                     <html lang="en">
                     <head>
                         <style>
-                            .thankyou{
-                                text-align: center;
+                            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+                            *{
+                            font-family: 'Roboto', sans-serif;
+                            }
+                            .center{
+                                display: flex;
+                                justify-content: center;
+                                font-weight: bold;
+                            }
+                            .column{
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                            }
+                            a{
+                                text-decoration: none;
+                                color: rgb(103,58,183);
+                            }
+                            a:active{
+                                color: rgb(103,58,183);
+                            }
+                            span{
+                                margin-left: 5px;
+                                color: rgb(255, 24, 24)
+                            }
+                            .content{
+                                border-top: 2px solid rgb(45,92,255);
+                                border-bottom: 2px solid rgb(45,92,255);
+                                margin-bottom: 15px;
+                            }
+                            .tab{
+                                padding-left: 30px;
+                            }
+                            h2{
+                                margin: -5px 0px 15px 0px;
+                                color: rgb(255, 24, 24)
                             }
                         </style>
                     </head>
                     <body>
-                        <p>Hello, ${content.name} Added ${content.item} in ${content.component}</p>
-                        <p class="thankyou">Thank you!</p>
+                        <a target="_blank" class="header column" href="http://aanandhaveedu.netlify.app/">
+                            <img src="https://aanandhaveedu.netlify.app/assets/av_logo.png" alt="av_logo" height="107px" width="100px">
+                            <h1 >Aanandhaveedu</h1>
+                            <h2 >${content.component} Notification</h2>
+                        </a>
+                        <div class="content">
+                            <h3>Hello,</h3>
+                            <p class="tab">${content.name}, Added ${content.item} in ${content.component}</p>
+                            <p class="center">Thank you!</p>
+                        </div>
+                        <div class="center">Created By <span>Venkatesh</span> </div>
                     </body>
                     </html>`
                 });
@@ -116,20 +288,63 @@ app.post('/send-email', async (req, res) => {
             }else if(content?.action=="delete" && (content?.component=="tobuy" || content?.component=="stock") ){
                 await transporter.sendMail({
                     from: "aanandhaveedu@gmail.com",
-                    to: ["sankaris110p@gmail.com","ajay40@mailinator.com","venkatesh17042002@gmail.com"],
+                    to: ["sankaris110p@gmail.com","ajay40@mailinator.com","venkatesh17042002@gmail.com","bharathprakash2395@hotmail.com"],
                     subject: content.subject,
                     html: `<!DOCTYPE html>
                     <html lang="en">
                     <head>
                         <style>
-                            .thankyou{
-                                text-align: center;
+                            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+                            *{
+                            font-family: 'Roboto', sans-serif;
+                            }
+                            .center{
+                                display: flex;
+                                justify-content: center;
+                                font-weight: bold;
+                            }
+                            .column{
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                            }
+                            a{
+                                text-decoration: none;
+                                color: rgb(103,58,183);
+                            }
+                            a:active{
+                                color: rgb(103,58,183);
+                            }
+                            span{
+                                margin-left: 5px;
+                                color: rgb(255, 24, 24)
+                            }
+                            .content{
+                                border-top: 2px solid rgb(45,92,255);
+                                border-bottom: 2px solid rgb(45,92,255);
+                                margin-bottom: 15px;
+                            }
+                            .tab{
+                                padding-left: 30px;
+                            }
+                            h2{
+                                margin: -5px 0px 15px 0px;
+                                color: rgb(255, 24, 24)
                             }
                         </style>
                     </head>
                     <body>
-                        <p>Hello, ${content.name} Deleted ${content.item} in ${content.component}</p>
-                        <p class="thankyou">Thank you!</p>
+                        <a target="_blank" class="header column" href="http://aanandhaveedu.netlify.app/">
+                            <img src="https://aanandhaveedu.netlify.app/assets/av_logo.png" alt="av_logo" height="107px" width="100px">
+                            <h1 >Aanandhaveedu</h1>
+                            <h2 >${content.component} Notification</h2>
+                        </a>
+                        <div class="content">
+                            <h3>Hello,</h3>
+                            <p class="tab">${content.name}, Deleted ${content.item} in ${content.component}</p>
+                            <p class="center">Thank you!</p>
+                        </div>
+                        <div class="center">Created By <span>Venkatesh</span> </div>
                     </body>
                     </html>`
                 });
@@ -137,20 +352,63 @@ app.post('/send-email', async (req, res) => {
             }else if(content?.action=="edit" && (content?.component=="tobuy" || content?.component=="stock")){
                 await transporter.sendMail({
                     from: "aanandhaveedu@gmail.com",
-                    to: ["sankaris110p@gmail.com","ajay40@mailinator.com","venkatesh17042002@gmail.com"],
+                    to: ["sankaris110p@gmail.com","ajay40@mailinator.com","venkatesh17042002@gmail.com","bharathprakash2395@hotmail.com"],
                     subject: content.subject,
                     html: `<!DOCTYPE html>
                     <html lang="en">
                     <head>
                         <style>
-                            .thankyou{
-                                text-align: center;
+                            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+                            *{
+                            font-family: 'Roboto', sans-serif;
+                            }
+                            .center{
+                                display: flex;
+                                justify-content: center;
+                                font-weight: bold;
+                            }
+                            .column{
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                            }
+                            a{
+                                text-decoration: none;
+                                color: rgb(103,58,183);
+                            }
+                            a:active{
+                                color: rgb(103,58,183);
+                            }
+                            span{
+                                margin-left: 5px;
+                                color: rgb(255, 24, 24)
+                            }
+                            .content{
+                                border-top: 2px solid rgb(45,92,255);
+                                border-bottom: 2px solid rgb(45,92,255);
+                                margin-bottom: 15px;
+                            }
+                            .tab{
+                                padding-left: 30px;
+                            }
+                            h2{
+                                margin: -5px 0px 15px 0px;
+                                color: rgb(255, 24, 24)
                             }
                         </style>
                     </head>
                     <body>
-                        <p>Hello, ${content.name} Edited ${content.item} in ${content.component}</p>
-                        <p class="thankyou">Thank you!</p>
+                        <a target="_blank" class="header column" href="http://aanandhaveedu.netlify.app/">
+                            <img src="https://aanandhaveedu.netlify.app/assets/av_logo.png" alt="av_logo" height="107px" width="100px">
+                            <h1 >Aanandhaveedu</h1>
+                            <h2 >${content.component} Notification</h2>
+                        </a>
+                        <div class="content">
+                            <h3>Hello,</h3>
+                            <p class="tab">${content.name}, Edited ${content.item} in ${content.component}</p>
+                            <p class="center">Thank you!</p>
+                        </div>
+                        <div class="center">Created By <span>Venkatesh</span> </div>
                     </body>
                     </html>`
                 });
