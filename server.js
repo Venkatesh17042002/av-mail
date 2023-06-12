@@ -87,9 +87,14 @@ app.post('/sendEmail', async (req, res) => {
                         <div class="content">
                             <h3>Hello,</h3>
                             <p class="tab">${content.name}, Added ${content.item} in ${content.component}</p>
-                            <p class="tab">Amount: ${content.amount}</p>
+                            <p class="tab">Old-Description: ${content.old_item}</p>
+                            <p class="tab">Old-Amount: ${content.old_amount}</p>
+                            <p></p>
+                            <p class="tab">New-Description: ${content.item}</p>
+                            <p class="tab">New-Amount: ${content.amount}</p>
+                            <p>-----------</p>
                             <p class="tab">Current Balance: ${content.balance}</p>
-                            <p class="center">Thank you!</p>
+                            <p class="center" align="center">Thank you!</p>
                         </div>
                         <div class="center">Created By <span>Venkatesh</span> </div>
                     </body>
@@ -153,6 +158,7 @@ app.post('/sendEmail', async (req, res) => {
                         <div class="content">
                             <h3>Hello,</h3>
                             <p class="tab">${content.name}, Deleted ${content.item} in ${content.component}</p>
+                            <p class="tab">Amount: ${content.amount}</p>
                             <p class="tab">Current Balance: ${content.balance}</p>
                             <p class="center">Thank you!</p>
                         </div>
