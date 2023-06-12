@@ -241,14 +241,14 @@ app.post('/sendEmail', async (req, res) => {
                             font-family: 'Roboto', sans-serif;
                             }
                             .center{
-                                display: flex;
-                                justify-content: center;
-                                font-weight: bold;
+                                display: flex !important;
+                                justify-content: center !important;
+                                font-weight: bold !important;
                             }
                             .column{
-                                display: flex;
-                                flex-direction: column;
-                                align-items: center;
+                                display: flex !important;
+                                flex-direction: column !important;
+                                align-items: center !important;
                             }
                             a{
                                 text-decoration: none;
