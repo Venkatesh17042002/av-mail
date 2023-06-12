@@ -79,19 +79,19 @@ app.post('/sendEmail', async (req, res) => {
                         </style>
                     </head>
                     <body>
-                        <a target="_blank" class="header column" href="http://aanandhaveedu.netlify.app/">
-                            <img src="https://aanandhaveedu.netlify.app/assets/av_logo.png" alt="av_logo" height="107px" width="100px">
-                            <h1 >Aanandhaveedu</h1>
-                            <h2 >${content.component} Notification</h2>
+                        <a target="_blank" href="http://aanandhaveedu.netlify.app/">
+                            <img style="text-align: center" src="https://aanandhaveedu.netlify.app/assets/av_logo.png" alt="av_logo" height="107px" width="100px">
+                            <h1 style="text-align: center">Aanandhaveedu</h1>
+                            <h2 style="text-align: center">${content.component} Notification</h2>
                         </a>
                         <div class="content">
                             <h3>Hello,</h3>
                             <p class="tab">${content.name}, Added ${content.item} in ${content.component}</p>
                             <p class="tab">Amount: ${content.amount}</p>
                             <p class="tab">Current Balance: ${content.balance}</p>
-                            <p class="center">Thank you!</p>
+                            <p style="text-align: center">Thank you!</p>
                         </div>
-                        <div class="center">Created By <span>Venkatesh</span> </div>
+                        <div style="text-align: center">Created By <span>Venkatesh</span> </div>
                     </body>
                     </html>`
                 });
@@ -145,18 +145,18 @@ app.post('/sendEmail', async (req, res) => {
                         </style>
                     </head>
                     <body>
-                        <a target="_blank" class="header column" href="http://aanandhaveedu.netlify.app/">
-                            <img src="https://aanandhaveedu.netlify.app/assets/av_logo.png" alt="av_logo" height="107px" width="100px">
-                            <h1 >Aanandhaveedu</h1>
-                            <h2 >${content.component} Notification</h2>
+                        <a target="_blank"  href="http://aanandhaveedu.netlify.app/">
+                            <img style="text-align: center" src="https://aanandhaveedu.netlify.app/assets/av_logo.png" alt="av_logo" height="107px" width="100px">
+                            <h1 style="text-align: center">Aanandhaveedu</h1>
+                            <h2 style="text-align: center">${content.component} Notification</h2>
                         </a>
                         <div class="content">
                             <h3>Hello,</h3>
                             <p class="tab">${content.name}, Deleted ${content.item} in ${content.component}</p>
                             <p class="tab">Current Balance: ${content.balance}</p>
-                            <p class="center">Thank you!</p>
+                            <p style="text-align: center">Thank you!</p>
                         </div>
-                        <div class="center">Created By <span>Venkatesh</span> </div>
+                        <div style="text-align: center">Created By <span>Venkatesh</span> </div>
                     </body>
                     </html>`
                 });
@@ -210,19 +210,19 @@ app.post('/sendEmail', async (req, res) => {
                         </style>
                     </head>
                     <body>
-                        <a target="_blank" class="header column" href="http://aanandhaveedu.netlify.app/">
-                            <img src="https://aanandhaveedu.netlify.app/assets/av_logo.png" alt="av_logo" height="107px" width="100px">
-                            <h1 >Aanandhaveedu</h1>
-                            <h2 >${content.component} Notification</h2>
+                        <a target="_blank"  href="http://aanandhaveedu.netlify.app/">
+                            <img style="text-align: center" src="https://aanandhaveedu.netlify.app/assets/av_logo.png" alt="av_logo" height="107px" width="100px">
+                            <h1 style="text-align: center">Aanandhaveedu</h1>
+                            <h2 style="text-align: center">${content.component} Notification</h2>
                         </a>
                         <div class="content">
                             <h3>Hello,</h3>
                             <p class="tab">${content.name}, Edited ${content.item} in ${content.component}</p>
                             <p class="tab">New-Amount: ${content.amount}</p>
                             <p class="tab">Current Balance: ${content.balance}</p>
-                            <p class="center">Thank you!</p>
+                            <p style="text-align: center">Thank you!</p>
                         </div>
-                        <div class="center">Created By <span>Venkatesh</span> </div>
+                        <div style="text-align: center">Created By <span>Venkatesh</span> </div>
                     </body>
                     </html>`
                 });
@@ -278,16 +278,16 @@ app.post('/sendEmail', async (req, res) => {
                     </head>
                     <body>
                         <a target="_blank" class="header column" href="http://aanandhaveedu.netlify.app/">
-                            <img src="https://aanandhaveedu.netlify.app/assets/av_logo.png" alt="av_logo" height="107px" width="100px">
-                            <h1 >Aanandhaveedu</h1>
-                            <h2 >${content.component} Notification</h2>
+                            <img style="text-align: center" src="https://aanandhaveedu.netlify.app/assets/av_logo.png" alt="av_logo" height="107px" width="100px">
+                            <h1 style="text-align: center">Aanandhaveedu</h1>
+                            <h2 style="text-align: center">${content.component} Notification</h2>
                         </a>
                         <div class="content">
                             <h3>Hello,</h3>
                             <p class="tab">${content.name}, Added ${content.item} in ${content.component}</p>
-                            <p class="center" align="center">Thank you!</p>
+                            <p style="text-align: center">Thank you!</p>
                         </div>
-                        <div class="center">Created By <span>Venkatesh</span> </div>
+                        <div style="text-align: center">Created By <span>Venkatesh</span> </div>
                     </body>
                     </html>`
                 });
@@ -341,17 +341,17 @@ app.post('/sendEmail', async (req, res) => {
                         </style>
                     </head>
                     <body>
-                        <a target="_blank" class="header column" href="http://aanandhaveedu.netlify.app/">
-                            <img src="https://aanandhaveedu.netlify.app/assets/av_logo.png" alt="av_logo" height="107px" width="100px">
-                            <h1 >Aanandhaveedu</h1>
-                            <h2 >${content.component} Notification</h2>
+                        <a target="_blank" href="http://aanandhaveedu.netlify.app/">
+                            <img style="text-align: center" src="https://aanandhaveedu.netlify.app/assets/av_logo.png" alt="av_logo" height="107px" width="100px">
+                            <h1 style="text-align: center">Aanandhaveedu</h1>
+                            <h2 style="text-align: center">${content.component} Notification</h2>
                         </a>
                         <div class="content">
                             <h3>Hello,</h3>
                             <p class="tab">${content.name}, Deleted ${content.item} in ${content.component}</p>
-                            <p class="center">Thank you!</p>
+                            <p style="text-align: center">Thank you!</p>
                         </div>
-                        <div class="center">Created By <span>Venkatesh</span> </div>
+                        <div style="text-align: center">Created By <span>Venkatesh</span> </div>
                     </body>
                     </html>`
                 });
@@ -405,17 +405,17 @@ app.post('/sendEmail', async (req, res) => {
                         </style>
                     </head>
                     <body>
-                        <a target="_blank" class="header column" href="http://aanandhaveedu.netlify.app/">
-                            <img src="https://aanandhaveedu.netlify.app/assets/av_logo.png" alt="av_logo" height="107px" width="100px">
-                            <h1 >Aanandhaveedu</h1>
-                            <h2 >${content.component} Notification</h2>
+                        <a target="_blank"  href="http://aanandhaveedu.netlify.app/">
+                            <img style="text-align: center"src="https://aanandhaveedu.netlify.app/assets/av_logo.png" alt="av_logo" height="107px" width="100px">
+                            <h1 style="text-align: center">Aanandhaveedu</h1>
+                            <h2 style="text-align: center">${content.component} Notification</h2>
                         </a>
                         <div class="content">
                             <h3>Hello,</h3>
                             <p class="tab">${content.name}, Edited ${content.item} in ${content.component}</p>
-                            <p class="center">Thank you!</p>
+                            <p style="text-align: center">Thank you!</p>
                         </div>
-                        <div class="center">Created By <span>Venkatesh</span> </div>
+                        <div style="text-align: center">Created By <span>Venkatesh</span> </div>
                     </body>
                     </html>`
                 });
