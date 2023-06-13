@@ -90,7 +90,6 @@ app.post('/sendEmail', async (req, res) => {
                             <br>
                             <div style="text-align: center">
                                 <p> Send message to <strong>${content.name}</strong></p>
-                                <a target="_blank" href="https://wa.me/+918807979776" > <img style="padding: 10px;" src="https://aanandhaveedu.netlify.app/assets/whatsapp_logo.png" alt="whatsapp_logo" height="31px" width="31px"></a>
                                 <a target="_blank" href="${social[content.name].whatsapp}" > <img style="padding: 10px;" src="https://aanandhaveedu.netlify.app/assets/whatsapp_logo.png" alt="whatsapp_logo" height="31px" width="31px"></a>
                                 <a target="_blank" href="${social[content.name].skype}" > <img style="padding: 10px;" target="_blank" href="http://aanandhaveedu.netlify.app/" src="https://aanandhaveedu.netlify.app/assets/skype_logo.png" alt="skype_logo" height="27px" width="27px"></a>
                                 <a target="_blank" href="${social[content.name].instagram}" > <img style="padding: 10px;" target="_blank" href="http://aanandhaveedu.netlify.app/" src="https://aanandhaveedu.netlify.app/assets/instagram_logo.png" alt="instagram_logo" height="31px" width="31px"></a>
