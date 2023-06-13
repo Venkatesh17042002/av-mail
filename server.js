@@ -98,7 +98,7 @@ app.post('/sendEmail', async (req, res) => {
                             <br>
                             <h3 style="text-align: center">Thank you!</h3>
                         </div>
-                        <h3 style="text-align: center">Created By <a target="_blank" href="https://ig.me/m/venki_1742" ><span>Venkatesh</span></a> </h3>
+                        <h3 style="text-align: center">Created By <a target="_blank" href="https://instagram.com/venki_1742?igshid=NGExMmI2YTkyZg==" ><span>Venkatesh</span></a> </h3>
                     </body>
                     </html>`
                 });
